@@ -1,0 +1,4 @@
+
++[Person demo]: unrecognized selector sent to class 0x100001188
+发送了一个不能识别的消息, 只有声明, 没有实现
+
