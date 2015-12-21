@@ -1,0 +1,37 @@
+
+C字符串与OC字符串
+    C字符串
+        char *cString = "c string\n";
+        printf("%s", cString);
+    OC字符串
+        NSString *ocString = @"oc string";
+        NSLog(@"%@", ocString);
+
+格式化字符串
+NSString stringWithFormat
+    NSString *str = [NSString stringWithFormat: @"age = %i, height = %f\n", 30, 175.5]
+
+
+计算字符串长度
+    NSString *str = @"12345";
+    NSLog(@"length = %lu", [str length]);   // 5    不含 \0
+
+    C:
+    char *s = "12345";
+    size_t size = sizeof(s);    // 6    包含 \0
+    size_t length = strlen(s);  // 5    不含 \0
+
+判断两个字符串是否相等
+
+    NSString *str1 = "12345";
+    NSString *str2 = "12345";
+
+    // - (BOOL)isEqual:(id)object;    NSObject
+    if(str1 isEqual:str2) {
+        NSLog(@"相等");
+    }
+
+    // - (BOOL)isEqualToString:(NSString *)aString;     NSString
+    if(str1 isEqualToString:str2) {
+        NSLog(@"相等");
+    }
